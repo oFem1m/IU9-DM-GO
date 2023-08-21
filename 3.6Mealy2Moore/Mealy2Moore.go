@@ -23,7 +23,7 @@ func readIntMatrix(rows, cols int) [][]int {
 	return matrix
 }
 
-func generateVertices(outputSize, n int, alphabetOutput []string) map[string]int {
+func generateVertices(inputSize, outputSize, n int, alphabetOutput []string) map[string]int {
 	vertices := make(map[string]int)
 	counter := 0
 
@@ -91,7 +91,7 @@ func main() {
 
 	outputMatrix := readIntMatrix(n, inputSize)
 
-	vertices := generateVertices(outputSize, n, alphabetOutput)
+	vertices := generateVertices(inputSize, outputSize, n, alphabetOutput)
 
 	isReachable := generateReachableMap(inputSize, outputSize, n, transitionMatrix, outputMatrix, alphabetOutput)
 
